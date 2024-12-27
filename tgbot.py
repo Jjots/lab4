@@ -2,21 +2,18 @@ import logging
 import requests
 import telebot
 
-# Ваш токен Telegram-бота
 TELEGRAM_TOKEN = '8031939902:AAHZyXKVHCkdmrMTvWB6HkpY7LgATOy9liM'
 
 # Список избранных городов
 favorite_cities = []
 
-# Инициализация бота
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
-# Логирование
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Словарь с переводами городов (для поиска)
+
 city_translation = {
     "Москва": "Moscow",
     "Санкт-Петербург": "Saint Petersburg",
